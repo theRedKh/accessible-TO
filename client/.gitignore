@@ -1,0 +1,45 @@
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js build output
+/.next/
+/.next/**
+
+# Production output
+/out/
+/build/
+/dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+/logs/
+*.log
+
+# Coverage
+/coverage/
+
+# Editor folders
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Caches
+.cache/
+.cache/**
+
+# Misc
+.pnp/
+.pnp.*
+
