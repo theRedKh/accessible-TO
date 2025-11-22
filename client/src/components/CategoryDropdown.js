@@ -1,10 +1,9 @@
 "use client"
 import React, { useState, useRef, useEffect } from "react";
 
-export default function CategoryDropdown({ items = ["label1", "label2", "label3"] }) {
+export default function CategoryDropdown({ label = "Category", items = ["element1", "element2", "element3"] }) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [selected, setSelected] = useState(items[0] || null);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -42,7 +41,7 @@ export default function CategoryDropdown({ items = ["label1", "label2", "label3"
   }
 
   function selectIndex(i) {
-    setSelected(items[i]);
+    // clicking a menu item closes the menu
     setOpen(false);
   }
 
@@ -56,14 +55,13 @@ export default function CategoryDropdown({ items = ["label1", "label2", "label3"
         onKeyDown={onKeyDown}
         className="inline-flex items-center gap-2 text-green-700 font-semibold px-3 py-1.5 rounded-md hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-[#73bb73] focus:ring-opacity-20 transition-all duration-150"
       >
-        {selected}
+        {label}
         <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
           <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clipRule="evenodd" />
         </svg>
       </button>
-
       {open && (
-        <div role="menu" aria-label="Categories" className="absolute right-0 mt-2 w-40 bg-white border border-zinc-200 rounded-md shadow-md z-10">
+        <div role="menu" aria-label="Categories" className="absolute right-0 mt-2 w-48 bg-white border border-zinc-200 rounded-md shadow-md z-10">
           <ul className="p-1">
             {items.map((it, i) => (
               <li key={it}>
