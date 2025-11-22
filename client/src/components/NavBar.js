@@ -7,21 +7,15 @@ export default function NavBar({ mobileMenuOpen, setMobileMenuOpen, searchFullOp
     <nav className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-3 sm:gap-6 py-4 pl-2 pr-4 sm:pl-4 sm:pr-6">
       <div className="flex items-center gap-4 flex-1 sm:flex-none">
         <a href="/" aria-label="AccessibleTOgether home" className="flex items-center gap-3 group focus:outline-none">
-          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#73bb73] rounded flex items-center justify-center text-white font-bold hover:shadow-[0_6px_18px_rgba(115,187,115,0.2)] transition-all duration-200 ease-in-out group-focus:ring-2 group-focus:ring-[#73bb73] group-focus:ring-opacity-20">
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <rect width="24" height="24" rx="4" fill="#73bb73" />
-              <text x="50%" y="54%" textAnchor="middle" fontWeight="700" fontSize="12" fill="white">A</text>
-            </svg>
+          {/* Clean logo: image only, keep original size but simplified styling */}
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded overflow-hidden flex items-center justify-center">
+            <img src="/images/logo.png" alt="AccessibleTOgether logo" className="w-full h-full object-contain" />
           </div>
 
           <span className="hidden sm:inline-block text-lg font-semibold text-zinc-900 group-hover:underline">AccessibleTOgether</span>
         </a>
 
-        <div className="hidden md:flex 2xl:hidden items-center">
-          <div className="w-9 h-9 bg-zinc-200 rounded-full flex items-center justify-center cursor-pointer mr-2">
-            <span className="text-sm text-zinc-600">P</span>
-          </div>
-        </div>
+        
 
         <button
           aria-controls="mobile-cats"

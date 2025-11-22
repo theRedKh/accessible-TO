@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import CategoryDropdown from "../components/CategoryDropdown";
 import NavBar from "../components/NavBar";
+import Recommed from "../components/recommed";
 
 export default function Home() {
   const slides = [
@@ -185,6 +186,32 @@ export default function Home() {
       <main className="w-full max-w-6xl mx-auto p-6">
         <section className="bg-white min-h-[400px]">
           <h2 className="text-2xl font-semibold mb-4">Recommendations</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+            <Recommed
+              image="/images/christnbkm.jpg"
+              title="Distillery District"
+              description="A Christmas tree lighting ceremony and seasonal festivities in the historic Distillery District."
+            />
+
+            <Recommed
+              image="/images/farmermarket.jpg"
+              title="Farmers Market"
+              description="Local vendors, fresh produce and community stalls every weekend."
+            />
+
+            <Recommed
+              image="/images/Italy.jpg"
+              title="Italian Festival"
+              description="An annual celebration of Italian culture with food, music and performances."
+            />
+
+            <Recommed
+              image={null}
+              title="this is another event coming soon"
+              description=""
+            />
+          </div>
         </section>
       </main>
     </div>
