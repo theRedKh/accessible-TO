@@ -1,22 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  /* Slightly off-white light background for consistent light mode */
+  --background: #f7f7f7;
   --foreground: #171717;
-}
 
-@theme inline {
+  /* Expose mapping variables used across the app */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
