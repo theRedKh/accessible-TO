@@ -4,8 +4,8 @@ import CategoryDropdown from "./CategoryDropdown";
 
 export default function NavBar({ mobileMenuOpen, setMobileMenuOpen, searchFullOpen, setSearchFullOpen, isNarrow, categories }) {
   return (
-    <nav className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-3 sm:gap-6 py-4 px-4 sm:px-6">
-      <div className="flex items-center gap-4 w-full sm:w-auto">
+    <nav className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-3 sm:gap-6 py-4 pl-2 pr-4 sm:pl-4 sm:pr-6">
+      <div className="flex items-center gap-4 flex-1 sm:flex-none">
         <a href="/" aria-label="AccessibleTOgether home" className="flex items-center gap-3 group focus:outline-none">
           <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#73bb73] rounded flex items-center justify-center text-white font-bold hover:shadow-[0_6px_18px_rgba(115,187,115,0.2)] transition-all duration-200 ease-in-out group-focus:ring-2 group-focus:ring-[#73bb73] group-focus:ring-opacity-20">
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
@@ -76,7 +76,7 @@ export default function NavBar({ mobileMenuOpen, setMobileMenuOpen, searchFullOp
         </div>
       </div>
 
-      <div className="w-full sm:w-auto flex items-center justify-between sm:justify-end gap-4">
+      <div className="flex items-center gap-4 sm:justify-end sm:flex-none">
         <div className="hidden xl:flex gap-6">
           <CategoryDropdown label={categories[0]} items={["element1", "element2", "element3"]} />
           <CategoryDropdown label={categories[1]} items={["element1", "element2", "element3"]} />

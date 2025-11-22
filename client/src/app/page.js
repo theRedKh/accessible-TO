@@ -60,7 +60,7 @@ export default function Home() {
   }, [searchFullOpen]);
 
   return (
-    <div className="flex min-h-screen min-h-1440-dvh w-full flex-col bg-white font-sans text-zinc-800 items-center text-center">
+    <div className="flex min-h-screen min-h-1440-dvh w-full flex-col bg-white font-sans text-zinc-800">
       <header className="w-full bg-white">
         <NavBar
           mobileMenuOpen={mobileMenuOpen}
