@@ -21,7 +21,7 @@ Available Options: ${JSON.stringify(searchResults, null, 2)}
 
     let aiResponse;
     try {
-      aiResponse = await queryGemini(prompt); // attempt real API call
+      aiResponse = await queryGemini(prompt); 
     } catch (err) {
       console.error('Gemini API failed:', err);
       aiResponse = {
