@@ -110,7 +110,7 @@ export default function Home() {
             <button
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close menu"
-              className="w-9 h-9 bg-zinc-100 rounded-md flex items-center justify-center"
+              className="w-9 h-9 bg-zinc-100 rounded-md flex items-center justify-center cursor-pointer text-black"
             >
               ✕
             </button>
