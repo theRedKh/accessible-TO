@@ -1,12 +1,76 @@
 let users = [
   {
     id: '1',
-    name: 'Test User',
-    email: 'test@example.com',
+    name: 'Liam Turner',
+    email: 'liam@example.com',
     disabilityType: 'mobility',
-    interests: ['food', 'music', 'sports']
+    interests: ['sports', 'music', 'technology']
+  },
+  {
+    id: '2',
+    name: 'Alice Johnson',
+    email: 'alice@example.com',
+    disabilityType: 'visual',
+    interests: ['art', 'technology', 'reading']
+  },
+  {
+    id: '3',
+    name: 'Bob Smith',
+    email: 'bob@example.com',
+    disabilityType: 'hearing',
+    interests: ['sports', 'gaming', 'travel']
+  },
+  {
+    id: '4',
+    name: 'Clara Martinez',
+    email: 'clara@example.com',
+    disabilityType: 'mobility',
+    interests: ['music', 'yoga', 'food']
+  },
+  {
+    id: '5',
+    name: 'David Lee',
+    email: 'david@example.com',
+    disabilityType: 'visual',
+    interests: ['technology', 'photography', 'gaming']
+  },
+  {
+    id: '6',
+    name: 'Eva Chen',
+    email: 'eva@example.com',
+    disabilityType: 'hearing',
+    interests: ['food', 'travel', 'sports']
+  },
+  {
+    id: '7',
+    name: 'Frank Wilson',
+    email: 'frank@example.com',
+    disabilityType: 'mobility',
+    interests: ['music', 'gaming', 'art']
+  },
+  {
+    id: '8',
+    name: 'Grace Kim',
+    email: 'grace@example.com',
+    disabilityType: 'visual',
+    interests: ['reading', 'yoga', 'food']
+  },
+  {
+    id: '9',
+    name: 'Henry Patel',
+    email: 'henry@example.com',
+    disabilityType: 'hearing',
+    interests: ['technology', 'sports', 'music']
+  },
+  {
+    id: '10',
+    name: 'Isabella Lopez',
+    email: 'isabella@example.com',
+    disabilityType: 'mobility',
+    interests: ['travel', 'art', 'food']
   }
 ];
+
 
 let items = [
   {
