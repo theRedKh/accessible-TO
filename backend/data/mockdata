@@ -1,0 +1,191 @@
+let users = [
+  {
+    id: '1',
+    name: 'Liam Turner',
+    email: 'liam@example.com',
+    disabilityType: 'mobility',
+    interests: ['sports', 'music', 'technology']
+  },
+  {
+    id: '2',
+    name: 'Alice Johnson',
+    email: 'alice@example.com',
+    disabilityType: 'visual',
+    interests: ['art', 'technology', 'reading']
+  },
+  {
+    id: '3',
+    name: 'Bob Smith',
+    email: 'bob@example.com',
+    disabilityType: 'hearing',
+    interests: ['sports', 'gaming', 'travel']
+  },
+  {
+    id: '4',
+    name: 'Clara Martinez',
+    email: 'clara@example.com',
+    disabilityType: 'mobility',
+    interests: ['music', 'yoga', 'food']
+  },
+  {
+    id: '5',
+    name: 'David Lee',
+    email: 'david@example.com',
+    disabilityType: 'visual',
+    interests: ['technology', 'photography', 'gaming']
+  },
+  {
+    id: '6',
+    name: 'Eva Chen',
+    email: 'eva@example.com',
+    disabilityType: 'hearing',
+    interests: ['food', 'travel', 'sports']
+  },
+  {
+    id: '7',
+    name: 'Frank Wilson',
+    email: 'frank@example.com',
+    disabilityType: 'mobility',
+    interests: ['music', 'gaming', 'art']
+  },
+  {
+    id: '8',
+    name: 'Grace Kim',
+    email: 'grace@example.com',
+    disabilityType: 'visual',
+    interests: ['reading', 'yoga', 'food']
+  },
+  {
+    id: '9',
+    name: 'Henry Patel',
+    email: 'henry@example.com',
+    disabilityType: 'hearing',
+    interests: ['technology', 'sports', 'music']
+  },
+  {
+    id: '10',
+    name: 'Isabella Lopez',
+    email: 'isabella@example.com',
+    disabilityType: 'mobility',
+    interests: ['travel', 'art', 'food']
+  }
+];
+
+
+let items = [
+  {
+    id: '1',
+    name: 'Accessible Café Downtown',
+    type: 'location',
+    description: 'Cozy café with full wheelchair accessibility, wide doorways, and accessible washrooms.',
+    address: {
+      street: '123 Queen St W',
+      city: 'Toronto',
+      province: 'ON',
+      postalCode: 'M5H 2M9'
+    },
+    coordinates: { lat: 43.6532, lng: -79.3832 },
+    accessibilityFeatures: ['wheelchair', 'ramp', 'accessible_washroom', 'accessible_parking'],
+    tags: ['cafe', 'coffee', 'food', 'downtown', 'wifi'],
+    rating: 4.5,
+    contact: {
+      phone: '416-555-0100',
+      website: 'www.accessiblecafe.com'
+    }
+  },
+  {
+    id: '2',
+    name: 'Sensory-Friendly Movie Night',
+    type: 'event',
+    description: 'Monthly movie screening with reduced lights and sound levels, perfect for individuals with sensory sensitivities.',
+    address: {
+      street: '789 Yonge St',
+      city: 'Toronto',
+      province: 'ON',
+      postalCode: 'M4W 2G8'
+    },
+    coordinates: { lat: 43.6762, lng: -79.3870 },
+    accessibilityFeatures: ['low_noise', 'wheelchair', 'sign_language', 'service_animal_friendly'],
+    tags: ['event', 'movie', 'entertainment', 'sensory-friendly', 'family'],
+    date: '2025-12-15T19:00:00',
+    rating: 4.8,
+    contact: {
+      email: 'events@sensorycinema.com'
+    }
+  },
+  {
+    id: '3',
+    name: 'Accessible Health Clinic',
+    type: 'health',
+    description: 'Full-service medical clinic with comprehensive accessibility features including audio guidance and braille signage.',
+    address: {
+      street: '456 University Ave',
+      city: 'Toronto',
+      province: 'ON',
+      postalCode: 'M5G 1X8'
+    },
+    coordinates: { lat: 43.6426, lng: -79.3871 },
+    accessibilityFeatures: ['wheelchair', 'elevator', 'braille', 'audio_guide', 'accessible_parking'],
+    tags: ['health', 'clinic', 'medical', 'doctor', 'healthcare'],
+    rating: 4.6,
+    hours: {
+      monday: '9:00 AM - 5:00 PM',
+      tuesday: '9:00 AM - 5:00 PM',
+      wednesday: '9:00 AM - 5:00 PM',
+      thursday: '9:00 AM - 5:00 PM',
+      friday: '9:00 AM - 5:00 PM',
+      saturday: 'Closed',
+      sunday: 'Closed'
+    },
+    contact: {
+      phone: '416-555-0200'
+    }
+  },
+  {
+    id: '4',
+    name: 'Sign Language Concert Series',
+    type: 'event',
+    description: 'Live music performances with professional ASL interpreters. An inclusive experience for the deaf and hearing communities.',
+    address: {
+      street: '321 King St E',
+      city: 'Toronto',
+      province: 'ON',
+      postalCode: 'M5A 1K7'
+    },
+    coordinates: { lat: 43.6511, lng: -79.3620 },
+    accessibilityFeatures: ['sign_language', 'wheelchair', 'high_contrast_signage', 'accessible_washroom'],
+    tags: ['event', 'music', 'concert', 'asl', 'deaf-friendly', 'entertainment'],
+    date: '2025-12-20T20:00:00',
+    rating: 4.9,
+    contact: {
+      website: 'www.aslconcerts.com'
+    }
+  },
+  {
+    id: '5',
+    name: 'Inclusive Art Gallery',
+    type: 'location',
+    description: 'Contemporary art gallery featuring tactile exhibits and audio descriptions for all artworks.',
+    address: {
+      street: '88 Queen St E',
+      city: 'Toronto',
+      province: 'ON',
+      postalCode: 'M5C 1S6'
+    },
+    coordinates: { lat: 43.6529, lng: -79.3777 },
+    accessibilityFeatures: ['wheelchair', 'audio_guide', 'braille', 'elevator', 'service_animal_friendly'],
+    tags: ['art', 'gallery', 'museum', 'culture', 'exhibits'],
+    rating: 4.7,
+    hours: {
+      monday: 'Closed',
+      tuesday: '10:00 AM - 6:00 PM',
+      wednesday: '10:00 AM - 6:00 PM',
+      thursday: '10:00 AM - 8:00 PM',
+      friday: '10:00 AM - 6:00 PM',
+      saturday: '10:00 AM - 6:00 PM',
+      sunday: '12:00 PM - 5:00 PM'
+    }
+  }
+];
+
+module.exports = { users, items };
