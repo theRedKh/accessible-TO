@@ -1,5 +1,5 @@
 {
-  "name": "next-app",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,8 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "babel-plugin-react-compiler": "1.0.0"
+    "@tailwindcss/postcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
+    "tailwindcss": "^4"
   }
 }
