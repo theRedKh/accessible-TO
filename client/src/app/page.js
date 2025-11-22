@@ -15,14 +15,19 @@ export default function Home() {
       <header className="w-full bg-white">
         <nav className="max-w-6xl mx-auto flex items-center gap-6 py-4 px-6">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-green-600 rounded flex items-center justify-center text-white font-bold">A</div>
+            <div
+              tabIndex={0}
+              className="w-12 h-12 bg-[#73bb73] rounded flex items-center justify-center text-white font-bold hover:shadow-[0_6px_18px_rgba(115,187,115,0.2)] transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#73bb73] focus:ring-opacity-20 focus:rounded-[16px]"
+            >
+              A
+            </div>
 
-            <div className="flex items-center rounded-full bg-zinc-100 p-1 shadow-sm cursor-pointer">
+            <div className="flex items-center rounded-full bg-zinc-100 p-1 shadow-sm">
               <label htmlFor="search-text" className="sr-only">Search</label>
               <input
                 id="search-text"
                 placeholder="What are you looking for?"
-                className="px-3 py-2 bg-transparent outline-none w-64 cursor-pointer"
+                className="px-3 py-2 bg-transparent outline-none w-64 text-zinc-600 placeholder:text-zinc-400 focus:text-black focus:ring-2 focus:ring-[#73bb73] focus:ring-opacity-20 focus:rounded-[16px] transition-all duration-200 ease-in-out"
               />
 
               <div className="border-l border-zinc-300 h-8 mx-2" />
@@ -31,10 +36,10 @@ export default function Home() {
               <input
                 id="search-location"
                 placeholder="Location"
-                className="px-3 py-2 bg-transparent outline-none w-40 cursor-pointer"
+                className="px-3 py-2 bg-transparent outline-none w-40 text-zinc-600 placeholder:text-zinc-400 focus:text-black focus:ring-2 focus:ring-[#73bb73] focus:ring-opacity-20 focus:rounded-[16px] transition-all duration-200 ease-in-out"
               />
 
-              <button className="ml-2 bg-blue-600 text-white px-3 py-2 rounded cursor-pointer">Search</button>
+              <button className="ml-2 bg-[#2596be] text-white px-4 py-2 rounded-[16px] cursor-pointer focus:ring-2 focus:ring-[#73bb73] focus:ring-opacity-20 focus:rounded-[16px] hover:shadow-[0_8px_24px_rgba(37,150,190,0.2)] transition-all duration-200 ease-in-out">Search</button>
             </div>
           </div>
 
