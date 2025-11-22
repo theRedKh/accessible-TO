@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
+import CategoryDropdown from "../components/CategoryDropdown";
 
 export default function Home() {
   const slides = [1, 2, 3];
@@ -45,9 +46,8 @@ export default function Home() {
 
           <div className="ml-auto flex items-center gap-6">
             <div className="hidden sm:flex gap-6">
-              <a href="#" className="text-green-700 font-semibold cursor-pointer">label1</a>
-              <a href="#" className="text-blue-600 font-semibold cursor-pointer">label2</a>
-              <a href="#" className="text-green-700 font-semibold cursor-pointer">label3</a>
+              {/* Category dropdown converted to component */}
+              <CategoryDropdown items={["label1", "label2", "label3"]} />
             </div>
 
             <div className="w-10 h-10 bg-zinc-200 rounded-full flex items-center justify-center cursor-pointer">
