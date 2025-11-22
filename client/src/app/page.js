@@ -4,7 +4,11 @@ import CategoryDropdown from "../components/CategoryDropdown";
 import NavBar from "../components/NavBar";
 
 export default function Home() {
-  const slides = [1, 2, 3];
+  const slides = [
+    "/images/Italy.jpg",
+    "/images/farmermarket.jpg",
+    "/images/christnbkm.jpg",
+  ];
   const [index, setIndex] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchFullOpen, setSearchFullOpen] = useState(false);
@@ -142,42 +146,38 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Full-width carousel (edge-to-edge) with centered inner container */}
-      <section className="mb-12 w-full">
-        <div className="w-full">
-          <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="h-64 sm:h-80 md:h-96 w-full bg-white rounded-lg overflow-hidden border border-zinc-200 shadow">
-              <div className="h-full flex items-center justify-center text-6xl font-bold text-zinc-400">
-                {slides[index]}
-              </div>
-            </div>
+      {/* Full-bleed carousel focused on desktop (1440px). Images expand full page width. */}
+      <section className="mb-12 w-full relative overflow-hidden">
+        <div className="relative w-full">
+          <div className="w-full h-[520px] bg-zinc-100 overflow-hidden">
+            <img src={slides[index]} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+          </div>
 
-            <button
-              onClick={() => setIndex((index - 1 + slides.length) % slides.length)}
-              aria-label="Previous"
-              className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow cursor-pointer"
-            >
-              ‹
-            </button>
+          <button
+            onClick={() => setIndex((index - 1 + slides.length) % slides.length)}
+            aria-label="Previous"
+            className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow cursor-pointer z-20"
+          >
+            ‹
+          </button>
 
-            <button
-              onClick={() => setIndex((index + 1) % slides.length)}
-              aria-label="Next"
-              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow cursor-pointer"
-            >
-              ›
-            </button>
+          <button
+            onClick={() => setIndex((index + 1) % slides.length)}
+            aria-label="Next"
+            className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow cursor-pointer z-20"
+          >
+            ›
+          </button>
 
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setIndex(i)}
-                  className={`w-3 h-3 rounded-full ${i === index ? "bg-blue-600" : "bg-zinc-300"} cursor-pointer`}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
-              ))}
-            </div>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`w-3 h-3 rounded-full ${i === index ? "bg-blue-600" : "bg-zinc-300"} cursor-pointer`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
