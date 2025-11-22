@@ -84,9 +84,11 @@ export default function Home() {
           </div>
 
           <div className="w-full sm:w-auto flex items-center justify-between sm:justify-end gap-4">
-            <div className="hidden sm:flex gap-6">
-              {/* Category dropdown converted to component */}
-              <CategoryDropdown items={["label1", "label2", "label3"]} />
+            <div className="hidden xl:flex gap-6">
+              {/* At large screens show three adjacent dropdowns */}
+              <CategoryDropdown label="label1" items={["element1", "element2", "element3"]} />
+              <CategoryDropdown label="label2" items={["element1", "element2", "element3"]} />
+              <CategoryDropdown label="label3" items={["element1", "element2", "element3"]} />
             </div>
 
             <div className="w-9 h-9 sm:w-10 sm:h-10 bg-zinc-200 rounded-full flex items-center justify-center cursor-pointer">
@@ -110,7 +112,7 @@ export default function Home() {
             <button
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close menu"
-              className="w-9 h-9 bg-zinc-100 rounded-md flex items-center justify-center"
+              className="w-9 h-9 bg-zinc-100 rounded-md flex items-center justify-center cursor-pointer text-black"
             >
               ✕
             </button>
