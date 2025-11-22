@@ -100,12 +100,12 @@ export default function Home() {
           role="dialog"
           aria-modal="true"
           aria-hidden={!mobileMenuOpen}
-          className={`fixed inset-0 z-50 bg-white overflow-auto p-6 transform transition-transform duration-300 ease-in-out ${mobileMenuOpen ? "translate-y-0" : "translate-y-full"} ${mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+          className={`fixed inset-0 z-50 bg-white overflow-auto p-6 transform transition-transform duration-300 ease-in-out ${mobileMenuOpen ? "translate-y-0" : "-translate-y-full"} ${mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-[#73bb73] rounded flex items-center justify-center text-white font-bold">A</div>
-              <h2 className="text-lg font-semibold">Categories</h2>
+              <h2 className="text-lg font-semibold text-zinc-900">Categories</h2>
             </div>
             <button
               onClick={() => setMobileMenuOpen(false)}
@@ -116,18 +116,24 @@ export default function Home() {
             </button>
           </div>
 
-          <ul className="grid gap-3">
+          <div className="grid gap-6">
             {categories.map((c) => (
-              <li key={c}>
-                <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full text-left px-4 py-3 rounded-md bg-zinc-50 hover:bg-zinc-100 text-lg"
-                >
-                  {c}
-                </button>
-              </li>
+              <section key={c} className="bg-white border border-zinc-100 rounded-md p-4">
+                <h3 className="text-lg font-semibold text-[#73bb73] mb-3">{c}</h3>
+                <div className="grid gap-2">
+                  {['element1','element2','element3'].map((el) => (
+                    <button
+                      key={el}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="w-full text-left px-3 py-2 rounded-md bg-transparent hover:bg-zinc-50 text-black"
+                    >
+                      {el}
+                    </button>
+                  ))}
+                </div>
+              </section>
             ))}
-          </ul>
+          </div>
         </div>
       </header>
 
