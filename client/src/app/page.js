@@ -59,7 +59,7 @@ export default function Home() {
   }, [searchFullOpen]);
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-white font-sans">
+    <div className="flex min-h-screen w-full flex-col bg-white font-sans text-zinc-800 items-center text-center">
       <header className="w-full bg-white">
         <nav className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 py-4 px-4 sm:px-6">
           <div className="flex items-center gap-4 w-full sm:w-auto">
@@ -256,7 +256,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white min-h-[400px]"></section>
+        <section className="bg-white min-h-[400px]">
+          <h2 className="text-2xl font-semibold mb-4">Recommendations</h2>
+        </section>
       </main>
     </div>
   );
