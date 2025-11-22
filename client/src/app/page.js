@@ -6,7 +6,7 @@ export default function Home() {
   const slides = [1, 2, 3];
   const [index, setIndex] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const categories = ["label1", "label2", "label3"];
+  const categories = ["Activites", "Events", "Health"];
 
   useEffect(() => {
     const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
