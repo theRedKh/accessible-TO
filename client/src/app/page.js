@@ -86,9 +86,9 @@ export default function Home() {
           <div className="w-full sm:w-auto flex items-center justify-between sm:justify-end gap-4">
             <div className="hidden xl:flex gap-6">
               {/* At large screens show three adjacent dropdowns */}
-              <CategoryDropdown label="label1" items={["element1", "element2", "element3"]} />
-              <CategoryDropdown label="label2" items={["element1", "element2", "element3"]} />
-              <CategoryDropdown label="label3" items={["element1", "element2", "element3"]} />
+              <CategoryDropdown label={categories[0]} items={["element1", "element2", "element3"]} />
+              <CategoryDropdown label={categories[1]} items={["element1", "element2", "element3"]} />
+              <CategoryDropdown label={categories[2]} items={["element1", "element2", "element3"]} />
             </div>
 
             <div className="w-9 h-9 sm:w-10 sm:h-10 bg-zinc-200 rounded-full flex items-center justify-center cursor-pointer">
