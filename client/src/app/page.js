@@ -218,9 +218,10 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="w-full max-w-6xl mx-auto p-6">
-        <section className="mb-12">
-          <div className="relative">
+      {/* Full-width carousel (edge-to-edge) with centered inner container */}
+      <section className="mb-12 w-full">
+        <div className="w-full">
+          <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div className="h-64 sm:h-80 md:h-96 w-full bg-white rounded-lg overflow-hidden border border-zinc-200 shadow">
               <div className="h-full flex items-center justify-center text-6xl font-bold text-zinc-400">
                 {slides[index]}
@@ -254,8 +255,10 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <main className="w-full max-w-6xl mx-auto p-6">
         <section className="bg-white min-h-[400px]">
           <h2 className="text-2xl font-semibold mb-4">Recommendations</h2>
         </section>
