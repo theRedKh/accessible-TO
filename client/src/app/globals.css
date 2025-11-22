@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Utility: use dynamic viewport height (100dvh) for large 1440px+ screens
+   This prevents double scrollbars on some displays by sizing the page to the
+   dynamic viewport height while keeping the existing Tailwind `min-h-screen`
+   for other sizes. Apply by adding the `min-h-1440-dvh` class to the root. */
+@media (min-width: 1440px) {
+  .min-h-1440-dvh {
+    min-height: 100dvh;
+  }
+}
