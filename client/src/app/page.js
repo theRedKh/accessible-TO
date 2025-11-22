@@ -63,12 +63,16 @@ export default function Home() {
       <header className="w-full bg-white">
         <nav className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 py-4 px-4 sm:px-6">
           <div className="flex items-center gap-4 w-full sm:w-auto">
-            <div
-              tabIndex={0}
-              className="w-10 h-10 sm:w-12 sm:h-12 bg-[#73bb73] rounded flex items-center justify-center text-white font-bold hover:shadow-[0_6px_18px_rgba(115,187,115,0.2)] transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#73bb73] focus:ring-opacity-20 focus:rounded-[16px]"
-            >
-              A
-            </div>
+            <a href="/" aria-label="AccessibleTOgether home" className="flex items-center gap-3 group focus:outline-none">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#73bb73] rounded flex items-center justify-center text-white font-bold hover:shadow-[0_6px_18px_rgba(115,187,115,0.2)] transition-all duration-200 ease-in-out group-focus:ring-2 group-focus:ring-[#73bb73] group-focus:ring-opacity-20">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <rect width="24" height="24" rx="4" fill="#73bb73" />
+                  <text x="50%" y="54%" textAnchor="middle" fontWeight="700" fontSize="12" fill="white">A</text>
+                </svg>
+              </div>
+
+              <span className="hidden sm:inline-block text-lg font-semibold text-zinc-900 group-hover:underline">AccessibleTOgether</span>
+            </a>
 
             {/* Profile moved left on md..2xl */}
             <div className="hidden md:flex 2xl:hidden items-center">
